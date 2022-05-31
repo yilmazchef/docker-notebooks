@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <title>PyScript 🐍 + Bottle 🍾 + Postgres 🐘 Demo</title>
+
+  <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+  <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
+  <style type="text/css">
+    body {
+      margin: 40px auto;
+      max-width: 650px;
+      line-height: 1.6;
+      font-size: 18px;
+      color: #444;
+      padding: 0 10px
+    }
+
+    h1,
+    h2,
+    h3 {
+      line-height: 1.2
+    }
+
+    label {
+      display: block;
+    }
+
+    input[type=text] {
+      padding: 12px 20px;
+      margin: 8px 0;
+      box-sizing: border-box;
+      border: 2px solid blue;
+      border-radius: 4px;
+      display: block;
+    }
+
+    button {
+      padding: 12px 20px;
+      margin: 8px 0;
+      box-sizing: border-box;
+      border: 2px solid darkgreen;
+      background-color: green;
+      color: white;
+      border-radius: 4px;
+      display: block;
+    }
+  </style>
+  <py-env>
+  - paths:
+    - backend/models.py
+  </py-env>
+</head>
+
+<body>
+  <h1 id="title">Hello World!</h1>
+  <h3>This is a demo using PyScript to sync the Python data model between Server and Client</h3>
+  <br>
+  <h3>Featuring:</h3>
+  <p>• <code>dataclass</code> for the data model</p>
+  <p>• <code>bottle</code> for the web-server</p>
+  <p>• <code>postgres</code> for the database</p>
+  <p>• <code>py-script</code> to present it all to the user</p>
+  <br>
+  <h1>Enter a Note!</h1>
+  <label for="user">Username for note:</label>
+  <input id="user" type="text" value="gb">
+  <label for="body">Note body</label>
+  <input id="body" type="text" value="Hello World!">
+  <button id="submit-btn" type="submit" pys-onClick="on_submit">
+    Create Note!
+  </button>
+  <h1 id="note-header">Streaming Notes:</h1>
+  <div id="note-output">
+  </div>
+  <py-script>
+import asyncio
+import json
+from dataclasses import asdict
+from js import fetch
+
+from models import Note, CreateNoteRequest
+
+async def on_submit(*args, **kwargs) -> None:
+    user = Element("user").element.value.strip()
+    body = Element("body").element.value.strip()
+    note = CreateNoteRequest(username=user, body=body)
+    url = "http://localhost:8080/notes"
+    await fetch(url, method='POST', body=note.as_string(), mode='no-cors')
+
+async def listen():
+  response = await fetch("http://localhost:8080/listen_notes")
+  reader = response.body.getReader()
+  while True:
+    try:
+      read_val = await reader.read()
+      yield read_val
+    except TypeError as e:
+      break
+
+async for read_val in listen():
+  raw_data = read_val.value.to_string()
+  kwargs = json.loads(raw_data)
+  note = Note(**kwargs)
+  pyscript.write('note-output', asdict(note), append=True)
+          </py-script>
+
+  <br>
+  <p>Access `note` or `kwargs` or `raw_data` in the REPL below!</p>
+  <p>Run a command with `shift + enter`</p>
+  <py-repl id="my-repl" auto-generate="true"> </py-repl>
+</body>
+
+</html>

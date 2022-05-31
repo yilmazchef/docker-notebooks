@@ -12,33 +12,33 @@ We’ve ranked the tools listed on G2 Crowd and available in Docker Hub as offic
 
 Stars are essentially upvotes that serve as a representation of popularity and satisfaction by the community and as a bookmark for users, according to Docker. Pulls are the total number of times a specific image was pulled from each individual registry.
 
-| **Product** | **Docker Hub Pulls** | **Docker Hub Stars** | **G2 Crowd Star Rating** | **Satisfaction Score** | **Market Presence** |
-| --- | --- | --- | --- | --- | --- |
-| **Wordpress** | 10,000,000 | 4169 | 4.3 | 99 | 80 |
-| **Ubuntu** | 10,000,000 | 233 | 4.5 | 94 | 50 |
-| **MySQL** | 10,000,000 | 225 | 4.4 | 93 | 75 |
-| **MongoDB** | 10,000,000 | 168 | 4.4 | 90 | 52 |
-| **Mariadb** | 10,000,000 | 37 | 4.6 | 90 | 34 |
-| **Arangodb** | 1,000,000 | 22 | 4.9 | 90 | 23 |
-| **Ruby on Rails** | 1,000,000 | 52 | 4.5 | 84 | 30 |
-| **PostgreSQL** | 10,000,000 | 128 | 4.4 | 82 | 36 |
-| **Django** | 1,000,000 | 59 | 4.6 | 79 | 25 |
-| **Redis** | 10,000,000 | 70 | 4.4 | 76 | 32 |
-| **Memcached** | 10,000,000 | 11 | 4.6 | 76 | 18 |
-| **Centos** | 10,000,000 | 68 | 4.5 | 75 | 32 |
-| **Fedora** | 10,000,000 | 44 | 4.5 | 72 | 54 |
-| **Nginx** | 10,000,000 | 31 | 4.8 | 72 | 36 |
-| **RethinkDB** | 5,000,000 | 13 | 4.4 | 67 | 20 |
-| **SonarQube** | 5,000,000 | 10 | 4.6 | 66 | 24 |
-| **Sentry** | 5,000,000 | 29 | 4.3 | 62 | 26 |
-| **Jenkins** | 10,000,000 | 161 | 4.2 | 52 | 31 |
-| **Owncloud** | 10,000,000 | 58 | 4 | 50 | 30 |
-| **Tomcat** | 10,000,000 | 21 | 4.4 | 49 | 35 |
-| **Joomla** | 1,000,000 | 111 | 3.9 | 48 | 28 |
-| **Apache Server** | 10,000,000 | 23 | 4.4 | 48 | 45 |
-| **Neo4J** | 5,000,000 | 30 | 4.4 | 46 | 32 |
-| **Elasticsearch** | 10,000,000 | 28 | 4.6 | 44 | 32 |
-| **Apache Maven** | 10,000,000 | 87 | 4.1 | 42 | 36 |
+| **Product**       | **Docker Hub Pulls** | **Docker Hub Stars** | **G2 Crowd Star Rating** | **Satisfaction Score** | **Market Presence** |
+| ----------------- | -------------------- | -------------------- | ------------------------ | ---------------------- | ------------------- |
+| **Wordpress**     | 10,000,000           | 4169                 | 4.3                      | 99                     | 80                  |
+| **Ubuntu**        | 10,000,000           | 233                  | 4.5                      | 94                     | 50                  |
+| **MySQL**         | 10,000,000           | 225                  | 4.4                      | 93                     | 75                  |
+| **MongoDB**       | 10,000,000           | 168                  | 4.4                      | 90                     | 52                  |
+| **Mariadb**       | 10,000,000           | 37                   | 4.6                      | 90                     | 34                  |
+| **Arangodb**      | 1,000,000            | 22                   | 4.9                      | 90                     | 23                  |
+| **Ruby on Rails** | 1,000,000            | 52                   | 4.5                      | 84                     | 30                  |
+| **PostgreSQL**    | 10,000,000           | 128                  | 4.4                      | 82                     | 36                  |
+| **Django**        | 1,000,000            | 59                   | 4.6                      | 79                     | 25                  |
+| **Redis**         | 10,000,000           | 70                   | 4.4                      | 76                     | 32                  |
+| **Memcached**     | 10,000,000           | 11                   | 4.6                      | 76                     | 18                  |
+| **Centos**        | 10,000,000           | 68                   | 4.5                      | 75                     | 32                  |
+| **Fedora**        | 10,000,000           | 44                   | 4.5                      | 72                     | 54                  |
+| **Nginx**         | 10,000,000           | 31                   | 4.8                      | 72                     | 36                  |
+| **RethinkDB**     | 5,000,000            | 13                   | 4.4                      | 67                     | 20                  |
+| **SonarQube**     | 5,000,000            | 10                   | 4.6                      | 66                     | 24                  |
+| **Sentry**        | 5,000,000            | 29                   | 4.3                      | 62                     | 26                  |
+| **Jenkins**       | 10,000,000           | 161                  | 4.2                      | 52                     | 31                  |
+| **Owncloud**      | 10,000,000           | 58                   | 4                        | 50                     | 30                  |
+| **Tomcat**        | 10,000,000           | 21                   | 4.4                      | 49                     | 35                  |
+| **Joomla**        | 1,000,000            | 111                  | 3.9                      | 48                     | 28                  |
+| **Apache Server** | 10,000,000           | 23                   | 4.4                      | 48                     | 45                  |
+| **Neo4J**         | 5,000,000            | 30                   | 4.4                      | 46                     | 32                  |
+| **Elasticsearch** | 10,000,000           | 28                   | 4.6                      | 44                     | 32                  |
+| **Apache Maven**  | 10,000,000           | 87                   | 4.1                      | 42                     | 36                  |
 
 ___
 

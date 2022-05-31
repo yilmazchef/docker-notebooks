@@ -10,18 +10,20 @@ In this lab you'll learn how to build, manage, and use an **overlay** network wi
 
 You will complete the following steps as part of this lab.
 
-- [Step 1 - Create a new Swarm](#swarm_init)
-- [Step 2 - Create an overlay network](#create_network)
-- [Step 3 - Create a service](#create_service)
-- [Step 4 - Test the network](#test)
-- [Step 5 - Test service discovery](#discover)
+- [Overlay networking and service discovery](#overlay-networking-and-service-discovery)
+- [Lab Meta](#lab-meta)
+- [Prerequisites](#prerequisites)
+- [<a name="swarm_init"></a>Step 1: Create a new Swarm](#step-1-create-a-new-swarm)
+- [<a name="create_network"></a>Step 2: Create an overlay network](#step-2-create-an-overlay-network)
+- [<a name="create_service"></a>Step 3: Create a service](#step-3-create-a-service)
+- [<a name="test"></a>Step 4: Test the network](#step-4-test-the-network)
+- [<a name="discover"></a>Step 5: Test service discovery](#step-5-test-service-discovery)
 
 # Prerequisites
 
 You will need all of the following to complete this lab:
 
 - Two Linux-based Docker hosts running **Docker 1.12** or higher in Engine mode (i.e. not yet configured for Swarm mode). You should use **node1** and **node2** from your lab.
-
 
 # <a name="swarm_init"></a>Step 1: Create a new Swarm
 

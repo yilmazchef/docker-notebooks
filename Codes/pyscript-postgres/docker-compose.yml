@@ -1,0 +1,36 @@
+services:
+  backend:
+    build: ./backend
+    volumes:
+      - ./backend:/home/appuser
+    env_file:
+      - ./.env.dev
+    ports:
+      - "8080:8080"
+    depends_on:
+      - db
+  fast-backend:
+    build: ./fast_api_backend
+    volumes:
+      - ./fast_api_backend:/home/appuser
+    env_file:
+      - ./.env.dev
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+
+  db:
+    build: ./postgres
+    command: ["postgres", "-c", "log_statement=all", "-c", "log_destination=stderr"]
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/pgdata
+    env_file:
+      - ./.env.dev
+    environment:
+      PGDATA: /var/lib/postgresql/data/pgdata/
+    ports:
+      - "5432:5432"
+
+volumes:
+  postgres_data:
